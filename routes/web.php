@@ -26,4 +26,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
     Route::resource('programas', \App\Http\Controllers\ProgramaController::class);
+    Route::resource('fichas', \App\Http\Controllers\FichaController::class);
 });

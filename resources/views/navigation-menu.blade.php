@@ -18,6 +18,9 @@
                     <x-nav-link href="{{ route('programas.index') }}" :active="request()->routeIs('programas.*')">
                         {{ __('Programas') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('fichas.index') }}" :active="request()->routeIs('fichas.*')">
+                        {{ __('Fichas') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -147,6 +150,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('programas.index') }}" :active="request()->routeIs('programas.*')">
                 {{ __('Programas') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('fichas.index') }}" :active="request()->routeIs('fichas.*')">
+                {{ __('Fichas') }}
             </x-responsive-nav-link>
         </div>
 

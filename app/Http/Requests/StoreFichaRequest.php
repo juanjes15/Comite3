@@ -11,7 +11,7 @@ class StoreFichaRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,13 @@ class StoreFichaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'fic_inicioLectiva' => 'required',
+            'fic_finLectiva' => 'required',
+            'fic_inicioProductiva' => 'required',
+            'fic_finProductiva' => 'required',
+            'fic_modalidad' => 'required',
+            'fic_jornada' => 'required',
+            'pro_id' => 'required'
         ];
     }
 }

@@ -13,7 +13,8 @@ class FichaController extends Controller
      */
     public function index()
     {
-        //
+        $fichas = Ficha::all();
+        return view('fichas.index', compact('fichas'));
     }
 
     /**
@@ -21,7 +22,9 @@ class FichaController extends Controller
      */
     public function create()
     {
-        //
+        $this->authorize('administrar fichas');
+
+        return view('fichas.create');
     }
 
     /**
@@ -29,7 +32,10 @@ class FichaController extends Controller
      */
     public function store(StoreFichaRequest $request)
     {
-        //
+        $this->authorize('administrar fichas');
+
+        Ficha::create($request->validated());
+        return redirect()->route('fichas.index');
     }
 
     /**
@@ -45,7 +51,9 @@ class FichaController extends Controller
      */
     public function edit(Ficha $ficha)
     {
-        //
+        $this->authorize('administrar fichas');
+
+        return view('fichas.edit', compact('ficha'));
     }
 
     /**
@@ -53,7 +61,10 @@ class FichaController extends Controller
      */
     public function update(UpdateFichaRequest $request, Ficha $ficha)
     {
-        //
+        $this->authorize('administrar fichas');
+
+        $ficha->update($request->validated());
+        return redirect()->route('fichas.index');
     }
 
     /**
@@ -61,6 +72,9 @@ class FichaController extends Controller
      */
     public function destroy(Ficha $ficha)
     {
-        //
+        $this->authorize('administrar fichas');
+
+        $ficha->delete();
+        return redirect()->route('fichas.index');
     }
 }
