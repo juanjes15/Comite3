@@ -43,9 +43,13 @@
                                 :value="old('fic_jornada')" required autofocus autocomplete="fic_jornada" />
                         </div>
                         <div>
-                            <x-label for="pro_id" value="{{ __('ID Programa (temporal)') }}" />
-                            <x-input id="pro_id" class="block mt-1 w-full" type="number" name="pro_id"
-                                :value="old('pro_id')" required autofocus autocomplete="pro_id" />
+                            <x-label for="pro_id" value="{{ __('Programa') }}" />
+                            <select name="pro_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                <option value="">--Seleccione un Programa--</option>
+                                @foreach ($programas as $programa)
+                                    <option value="{{ $programa->id }}">{{ $programa->pro_nombre }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="flex mt-4">
                             <x-button>
