@@ -16,7 +16,7 @@ class AprendizController extends Controller
     {
         $aprendizs = Aprendiz::all();
         $fichas = Ficha::all();
-        return view('aprendizs.index', compact('aprendizs', 'programas'));
+        return view('aprendizs.index', compact('aprendizs', 'fichas'));
     }
 
     /**
@@ -24,27 +24,27 @@ class AprendizController extends Controller
      */
     public function create()
     {
-        $this->authorize('administrar fichas');
+        $this->authorize('administrar aprendices');
 
-        $programas = Programa::all();
-        return view('fichas.create', compact('programas'));
+        $fichas = Ficha::all();
+        return view('aprendizs.create', compact('fichas'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreFichaRequest $request)
+    public function store(StoreAprendizRequest $request)
     {
-        $this->authorize('administrar fichas');
+        $this->authorize('administrar aprendices');
 
-        Ficha::create($request->validated());
-        return redirect()->route('fichas.index');
+        Aprendiz::create($request->validated());
+        return redirect()->route('aprendizs.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Ficha $ficha)
+    public function show(Aprendiz $aprendiz)
     {
         //
     }
@@ -52,33 +52,33 @@ class AprendizController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Ficha $ficha)
+    public function edit(Aprendiz $aprendiz)
     {
-        $this->authorize('administrar fichas');
+        $this->authorize('administrar aprendices');
 
-        $programas = Programa::all();
-        return view('fichas.edit', compact('ficha', 'programas'));
+        $fichas = Ficha::all();
+        return view('aprendizs.edit', compact('aprendiz', 'fichas'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateFichaRequest $request, Ficha $ficha)
+    public function update(UpdateAprendizRequest $request, Aprendiz $aprendiz)
     {
-        $this->authorize('administrar fichas');
+        $this->authorize('administrar aprendices');
 
-        $ficha->update($request->validated());
-        return redirect()->route('fichas.index');
+        $aprendiz->update($request->validated());
+        return redirect()->route('aprendizs.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Ficha $ficha)
+    public function destroy(Aprendiz $aprendiz)
     {
-        $this->authorize('administrar fichas');
+        $this->authorize('administrar aprendices');
 
-        $ficha->delete();
-        return redirect()->route('fichas.index');
+        $aprendiz->delete();
+        return redirect()->route('aprendizs.index');
     }
 }
