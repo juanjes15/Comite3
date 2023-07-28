@@ -19,6 +19,8 @@ class AdminUserSeeder extends Seeder
         $permission->assignRole($adminRole);
         $permission2 = Permission::create(['name' => 'administrar fichas']);
         $permission2->assignRole($adminRole);
+        $permission3 = Permission::create(['name' => 'administrar aprendices']);
+        $permission3->assignRole($adminRole);
 
         $adminUser = User::factory()->create([
             'email' => 'admin@admin.com',
