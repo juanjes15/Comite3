@@ -27,6 +27,9 @@
                                 <th scope="col" class="px-6 py-3">
                                     Jornada
                                 </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Programa
+                                </th>
                                 @can('administrar fichas')
                                     <th scope="col" class="px-6 py-3">
                                     </th>
@@ -47,6 +50,13 @@
                                     </td>
                                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                         {{ $ficha->fic_jornada }}
+                                    </td>
+                                    <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                                        @foreach ($programas as $programa)
+                                            @if ($programa->id == $ficha->pro_id)
+                                                {{ $programa->pro_nombre }}
+                                            @endif
+                                        @endforeach
                                     </td>
                                     @can('administrar fichas')
                                         <td class="px-6 py-4">

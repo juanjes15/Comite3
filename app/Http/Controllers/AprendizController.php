@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreFichaRequest;
-use App\Http\Requests\UpdateFichaRequest;
+use App\Http\Requests\StoreAprendizRequest;
+use App\Http\Requests\UpdateAprendizRequest;
+use App\Models\Aprendiz;
 use App\Models\Ficha;
-use App\Models\Programa;
 
-class FichaController extends Controller
+class AprendizController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+        $aprendizs = Aprendiz::all();
         $fichas = Ficha::all();
-        $programas = Programa::all();
-        return view('fichas.index', compact('fichas', 'programas'));
+        return view('aprendizs.index', compact('aprendizs', 'programas'));
     }
 
     /**
