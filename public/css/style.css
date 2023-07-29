@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Exo 2', sans-serif;
+}
+.pie{
+    background: #c1c1c1;
+}
+img{
+    width: 40px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+span{
+    font-size: 23px;
+}
+.fb{
+    background: rgb(0, 81, 255);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.tw{
+    background: rgb(0, 140, 255);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.in{
+    background: rgb(255, 0, 179);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.li{
+    background: rgb(0, 102, 255);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.yt{
+    background: rgb(255, 0, 0);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.logotipo{
+    font-size: 18px;
+    color: white;
+}
+.section{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.section div{
+    display: flex;
+    flex-direction: column;
+}
+div h2{
+    color: white;
+    padding: 10px 0;
+}
+a{
+    color: rgba(255, 255, 255, 0.527);
+    text-decoration: none;
+    padding: 5px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    background: none;
+    border: solid 2px white;
+    padding: 10px 20px;
+}
+button{
+    padding: 10px 20px;
+    background: white;
+    color: blueviolet;
+    font-size: 18px;
+}
+.derechos{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #041f33;
+    color: white;
+}
+.logotipo {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Color rosa brillante */
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Efecto al pasar el cursor */
+  .logotipo:hover {
+    transform: scale(1.02); /* Cambia el valor a 1.05 para un efecto menos exagerado */
+    color: #000000; /* Color rosa más intenso */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  /*carrusel*/
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Exo 2', sans-serif;
+}
+.pie{
+    background: #c1c1c1;
+}
+img{
+    width: 40px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+span{
+    font-size: 23px;
+}
+.fb{
+    background: rgb(0, 81, 255);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.tw{
+    background: rgb(0, 140, 255);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.in{
+    background: rgb(255, 0, 179);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.li{
+    background: rgb(0, 102, 255);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.yt{
+    background: rgb(255, 0, 0);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.logotipo{
+    font-size: 18px;
+    color: white;
+}
+.section{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.section div{
+    display: flex;
+    flex-direction: column;
+}
+div h2{
+    color: white;
+    padding: 10px 0;
+}
+a{
+    color: rgba(255, 255, 255, 0.527);
+    text-decoration: none;
+    padding: 5px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    background: none;
+    border: solid 2px white;
+    padding: 10px 20px;
+}
+button{
+    padding: 10px 20px;
+    background: white;
+    color: blueviolet;
+    font-size: 18px;
+}
+.derechos{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #041f33;
+    color: white;
+}
+.logotipo {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Color rosa brillante */
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Efecto al pasar el cursor */
+  .logotipo:hover {
+    transform: scale(1.02); /* Cambia el valor a 1.05 para un efecto menos exagerado */
+    color: #000000; /* Color rosa más intenso */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  /*carrusel*/
+  .swiper-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    height: 300px; /* Establece una altura deseada para el carrusel */
+    overflow: hidden; /* Oculta el contenido que se salga del carrusel */
+}
+
+.swiper-slide {
+    display: flex; /* Usa flexbox para alinear verticalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    height: 100%; /* Las diapositivas deben tener la misma altura que el carrusel */
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Evita que las imágenes sean clickeables */
+}
+
+    /* Estilos para los botones de navegación (opcional) */
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 40px;
+        height: 40px;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .swiper-button-next {
+        right: 10px;
+    }
+
+    .swiper-button-prev {
+        left: 10px;
+    }
+    .swiper-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 30px auto;
+      }
+      
+      .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* Estilos para la barra superior */
+/* Estilos para la barra superior */
+.top-bar {
+    position: relative;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilos para los enlaces dentro de la barra superior */
+.top-bar a {
+    margin-right: 10px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.top-bar a:hover {
+    color: #fff;
+}
+
+/* Estilos para el título en la barra superior */
+.top-bar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block; /* Hace que el título esté en línea con los enlaces */
+}
+
+      
+  
+  

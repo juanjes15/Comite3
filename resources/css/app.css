@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'owl.carousel/dist/assets/owl.carousel.css';
+
 
 [x-cloak] {
     display: none;
