@@ -13,11 +13,6 @@
                     <form method="POST" action="{{ route('aprendizs.store') }}">
                         @csrf
                         <div>
-                            <x-label for="fic_codigo" value="{{ __('Codigo') }}" />
-                            <x-input id="fic_codigo" class="block mt-1 w-full" type="text" name="fic_codigo"
-                                :value="old('fic_codigo')" required autofocus autocomplete="fic_codigo" />
-                        </div>
-                        <div>
                             <x-label for="apr_identificacion" value="{{ __('Identificacion') }}" />
                             <x-input id="apr_identificacion" class="block mt-1 w-full" type="text"
                                 name="apr_identificacion" :value="old('apr_identificacion')" required autofocus
