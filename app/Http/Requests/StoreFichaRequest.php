@@ -22,6 +22,7 @@ class StoreFichaRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'fic_codigo' => 'required',
             'fic_inicioLectiva' => 'required',
             'fic_finLectiva' => 'required',
             'fic_inicioProductiva' => 'required',

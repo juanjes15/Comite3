@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Lista de fichas') }}
+            {{ __('Lista de aprendices') }}
         </h2>
     </x-slot>
 
@@ -9,59 +9,59 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                    @can('administrar fichas')
-                        <x-link href="{{ route('fichas.create') }}" class="m-4">Añadir ficha</x-link>
+                    @can('administrar aprendices')
+                        <x-link href="{{ route('aprendizs.create') }}" class="m-4">Añadir aprendiz</x-link>
                     @endcan
                     <table class="w-full text-sm text-left text-gray-500 ">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
                             <tr>
                                 <th scope="col" class="px-6 py-3">
-                                    Código
+                                    Identificación
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Inicio Etapa Lectiva
+                                    Nombres
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Inicio Etapa Productiva
+                                    Apellidos
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Modalidad
+                                    Email
                                 </th>
                                 <th scope="col" class="px-6 py-3">
-                                    Programa
+                                    Ficha
                                 </th>
-                                @can('administrar fichas')
+                                @can('administrar aprendices')
                                     <th scope="col" class="px-6 py-3">
                                     </th>
                                 @endcan
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($fichas as $ficha)
+                            @forelse ($aprendizs as $aprendiz)
                                 <tr class="bg-white border-b ">
                                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        {{ $ficha->fic_codigo }}
+                                        {{ $aprendiz->apr_identificacion }}
                                     </td>
                                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        {{ $ficha->fic_inicioLectiva }}
+                                        {{ $aprendiz->apr_nombres }}
                                     </td>
                                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        {{ $ficha->fic_inicioProductiva }}
+                                        {{ $aprendiz->apr_apellidos }}
                                     </td>
                                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        {{ $ficha->fic_modalidad }}
+                                        {{ $aprendiz->apr_email }}
                                     </td>
                                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-                                        @foreach ($programas as $programa)
-                                            @if ($programa->id == $ficha->pro_id)
-                                                {{ $programa->pro_nombre }}
+                                        @foreach ($fichas as $ficha)
+                                            @if ($ficha->id == $aprendiz->fic_id)
+                                                {{ $ficha->fic_codigo }}
                                             @endif
                                         @endforeach
                                     </td>
-                                    @can('administrar fichas')
+                                    @can('administrar aprendices')
                                         <td class="px-6 py-4">
-                                            <x-link href="{{ route('fichas.edit', $ficha) }}">Editar</x-link>
-                                            <form method="POST" action="{{ route('fichas.destroy', $ficha) }}"
+                                            <x-link href="{{ route('aprendizs.edit', $aprendiz) }}">Editar</x-link>
+                                            <form method="POST" action="{{ route('aprendizs.destroy', $aprendiz) }}"
                                                 class="inline-block">
                                                 @csrf
                                                 @method('DELETE')
@@ -74,7 +74,7 @@
                             @empty
                                 <tr class="bg-white border-b">
                                     <td colspan="5" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                        {{ __('No se encontraron fichas') }}
+                                        {{ __('No se encontraron aprendices') }}
                                     </td>
                                 </tr>
                             @endforelse
