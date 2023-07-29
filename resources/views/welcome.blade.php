@@ -49,7 +49,7 @@
 
     <div class="max-w-7xl mx-auto p-6 lg:p-8">
     <div class="flex justify-center">
-        <img src="{{ asset('/logo/logo.jpeg') }}" alt="" style="width: 128px; border-radius: 50%; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); margin-top: 10px;">
+        <img src="{{ asset('/logo/logo1.png') }}" alt="" style="width: 128px; border-radius: 50%; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); margin-top: 10px;">
     </div>
 </div>
  
