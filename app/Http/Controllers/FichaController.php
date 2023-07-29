@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreFichaRequest;
 use App\Http\Requests\UpdateFichaRequest;
 use App\Models\Ficha;
+use App\Models\Programa;
 
 class FichaController extends Controller
 {
@@ -14,7 +15,8 @@ class FichaController extends Controller
     public function index()
     {
         $fichas = Ficha::all();
-        return view('fichas.index', compact('fichas'));
+        $programas = Programa::all();
+        return view('fichas.index', compact('fichas', 'programas'));
     }
 
     /**
@@ -24,7 +26,8 @@ class FichaController extends Controller
     {
         $this->authorize('administrar fichas');
 
-        return view('fichas.create');
+        $programas = Programa::all();
+        return view('fichas.create', compact('programas'));
     }
 
     /**
@@ -53,7 +56,8 @@ class FichaController extends Controller
     {
         $this->authorize('administrar fichas');
 
-        return view('fichas.edit', compact('ficha'));
+        $programas = Programa::all();
+        return view('fichas.edit', compact('ficha', 'programas'));
     }
 
     /**
