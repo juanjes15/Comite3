@@ -13,11 +13,16 @@
                     <form method="POST" action="{{ route('fichas.update', $ficha) }}">
                         @csrf
                         @method('PUT')
-
+                        <div>
+                            <x-label for="fic_codigo" value="{{ __('Codigo') }}" />
+                            <x-input id="fic_codigo" class="block mt-1 w-full" type="text" name="fic_codigo"
+                                :value="$ficha->fic_codigo" required autofocus autocomplete="fic_codigo" />
+                        </div>
                         <div>
                             <x-label for="fic_inicioLectiva" value="{{ __('Inicio Etapa Lectiva') }}" />
-                            <x-input id="fic_inicioLectiva" class="block mt-1 w-full" type="date" name="fic_inicioLectiva"
-                                :value="$ficha->fic_inicioLectiva" required autofocus autocomplete="fic_inicioLectiva" />
+                            <x-input id="fic_inicioLectiva" class="block mt-1 w-full" type="date"
+                                name="fic_inicioLectiva" :value="$ficha->fic_inicioLectiva" required autofocus
+                                autocomplete="fic_inicioLectiva" />
                         </div>
                         <div>
                             <x-label for="fic_finLectiva" value="{{ __('Fin Etapa Lectiva') }}" />
@@ -26,13 +31,15 @@
                         </div>
                         <div>
                             <x-label for="fic_inicioProductiva" value="{{ __('Inicio Etapa Productiva') }}" />
-                            <x-input id="fic_inicioProductiva" class="block mt-1 w-full" type="date" name="fic_inicioProductiva"
-                                :value="$ficha->fic_inicioProductiva" required autofocus autocomplete="fic_inicioProductiva" />
+                            <x-input id="fic_inicioProductiva" class="block mt-1 w-full" type="date"
+                                name="fic_inicioProductiva" :value="$ficha->fic_inicioProductiva" required autofocus
+                                autocomplete="fic_inicioProductiva" />
                         </div>
                         <div>
                             <x-label for="fic_finProductiva" value="{{ __('Fin Etapa Productiva') }}" />
-                            <x-input id="fic_finProductiva" class="block mt-1 w-full" type="date" name="fic_finProductiva"
-                                :value="$ficha->fic_finProductiva" required autofocus autocomplete="fic_finProductiva" />
+                            <x-input id="fic_finProductiva" class="block mt-1 w-full" type="date"
+                                name="fic_finProductiva" :value="$ficha->fic_finProductiva" required autofocus
+                                autocomplete="fic_finProductiva" />
                         </div>
                         <div>
                             <x-label for="fic_modalidad" value="{{ __('Modalidad') }}" />
@@ -46,10 +53,12 @@
                         </div>
                         <div>
                             <x-label for="pro_id" value="{{ __('Programa') }}" />
-                            <select name="pro_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                            <select name="pro_id"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                                 @foreach ($programas as $programa)
                                     @if ($programa->id == $ficha->pro_id)
-                                        <option selected value="{{ $programa->id }}">{{ $programa->pro_nombre }}</option>
+                                        <option selected value="{{ $programa->id }}">{{ $programa->pro_nombre }}
+                                        </option>
                                     @else
                                         <option value="{{ $programa->id }}">{{ $programa->pro_nombre }}</option>
                                     @endif

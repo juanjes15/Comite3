@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class FichaSeeder extends Seeder
 {
@@ -13,6 +13,7 @@ class FichaSeeder extends Seeder
     public function run(): void
     {
         DB::table('fichas')->insert([
+            'fic_codigo' => fake()->randomNumber(7, true),
             'fic_inicioLectiva' => fake()->date(),
             'fic_finLectiva' => fake()->date(),
             'fic_inicioProductiva' => fake()->date(),

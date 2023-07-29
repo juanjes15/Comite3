@@ -11,7 +11,7 @@ class StoreAprendizRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,14 @@ class StoreAprendizRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'apr_identificacion' => 'required',
+            'apr_nombres' => 'required',
+            'apr_apellidos' => 'required',
+            'apr_email' => 'required',
+            'apr_telefono' => 'required',
+            'apr_direccion' => 'required',
+            'apr_fechaNacimiento' => 'required',
+            'fic_id' => 'required'
         ];
     }
 }
