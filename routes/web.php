@@ -28,4 +28,5 @@ Route::middleware([
     Route::resource('programas', \App\Http\Controllers\ProgramaController::class);
     Route::resource('fichas', \App\Http\Controllers\FichaController::class);
     Route::resource('aprendizs', \App\Http\Controllers\AprendizController::class);
+    Route::resource('instructors', \App\Http\Controllers\InstructorController::class);
 });
