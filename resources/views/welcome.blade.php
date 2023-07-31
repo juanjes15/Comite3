@@ -23,9 +23,7 @@
         </style>
     </head>
 <div id="current-time" class="text-right p-2 text-gray-600 dark:text-gray-400"></div>
-</div>
-    
-</div>
+<div>
           @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                     @auth
@@ -54,17 +52,18 @@
 </div>
  
     </body>
-    <div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="{{ asset('imagenes/imagen1.png') }}" alt="Imagen 1"></div>
-        <div class="swiper-slide"><img src="{{ asset('imagenes/imagen2.jpg') }}" alt="Imagen 2"></div>
-        <div class="swiper-slide"><img src="{{ asset('imagenes/imagen3.webp') }}" alt="Imagen 3"></div>
-        <div class="swiper-slide"><img src="{{ asset('imagenes/imagen4.jpg') }}" alt="Imagen 4"></div>
-        <div class="swiper-slide"><img src="{{ asset('imagenes/imagen5.jpg') }}" alt="Imagen 5"></div>
-        <div class="swiper-slide"><img src="{{ asset('imagenes/imagen6.jpg') }}" alt="Imagen 6"></div>
-        <div class="swiper-slide"><img src="{{ asset('imagenes/imagen7.jpg') }}" alt="Imagen 7"></div>
+    <div class="swiper-container"">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="{{ asset('imagenes/imagen1.png') }}" alt="Imagen 1"></div>
+            <div class="swiper-slide"><img src="{{ asset('imagenes/imagen2.jpg') }}" alt="Imagen 2"></div>
+            <div class="swiper-slide"><img src="{{ asset('imagenes/imagen3.webp') }}" alt="Imagen 3"></div>
+            <div class="swiper-slide"><img src="{{ asset('imagenes/imagen4.jpg') }}" alt="Imagen 4"></div>
+            <div class="swiper-slide"><img src="{{ asset('imagenes/imagen5.jpg') }}" alt="Imagen 5"></div>
+            <div class="swiper-slide"><img src="{{ asset('imagenes/imagen6.jpg') }}" alt="Imagen 6"></div>
+            <div class="swiper-slide"><img src="{{ asset('imagenes/imagen7.jpg') }}" alt="Imagen 7"></div>
+        </div>
     </div>
-</div>
+    
 
        
     </div>
@@ -116,6 +115,27 @@
         color: #007bff;
         text-decoration: underline;
     }
+    
+    @media (max-width: 640px) {
+            /* Styles for screens with a maximum width of 640px */
+            .top-bar {
+                text-align: center;
+            }
+            .header-bar {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* Styles for screens with a maximum width of 768px */
+            .header-bar h1 {
+                font-size: 1.5rem;
+            }
+            .header-bar p {
+                font-size: 0.9rem;
+            }
+        }
+
 </style>
 
 <div class="section">
