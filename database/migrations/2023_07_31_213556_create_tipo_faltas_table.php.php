@@ -14,14 +14,12 @@ return new class extends Migration
 
         Schema::create('tipofaltas', function (Blueprint $table) {
             $table->id();
-            $table->string('tpf_observacion');
             $table->string('tpf_numero');
-            $table->string('tpf_descripcion');
-            $table->string('tpf_tipo');
+            $table->string('tpf_descripcion',1000);
             $table->timestamps();
         });
 
-        
+
     }
 
     /**

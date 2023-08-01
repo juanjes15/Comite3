@@ -15,14 +15,14 @@ return new class extends Migration
         Schema::create('articuloreglamentos', function (Blueprint $table) {
             $table->id();
             $table->string('arti_numero');
-            $table->string('arti_descripcion');
+            $table->string('arti_descripcion',5000);
             $table->string('arti_tipo');
             $table->unsignedBigInteger('tpf_id');
             $table->foreign('tpf_id')->references('id')->on('tipofaltas');
             $table->timestamps();
         });
 
-        
+
     }
 
     /**

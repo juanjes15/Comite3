@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             FichaSeeder::class,
             AprendizSeeder::class,
             TipoFaltaSeeder::class,
+            ArticuloReglamento::class,
         ]);
     }
 }

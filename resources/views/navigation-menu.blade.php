@@ -24,6 +24,7 @@
                     <x-nav-link href="{{ route('instructors.index') }}" :active="request()->routeIs('instructors.*')">
                         {{ __('Instructores') }}
                     </x-nav-link>
+                    
                 </div>
             </div>
 
