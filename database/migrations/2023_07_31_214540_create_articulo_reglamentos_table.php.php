@@ -14,7 +14,7 @@ return new class extends Migration
 
         Schema::create('articuloreglamentos', function (Blueprint $table) {
             $table->id();
-            $table->integer('arti_numero');
+            $table->string('arti_numero');
             $table->string('arti_descripcion');
             $table->string('arti_tipo');
             $table->unsignedBigInteger('tpf_id');

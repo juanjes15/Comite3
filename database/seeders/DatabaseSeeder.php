@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             ProgramaSeeder::class,
             FichaSeeder::class,
             AprendizSeeder::class,
+            TipoFaltaSeeder::class,
         ]);
     }
 }
