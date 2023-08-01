@@ -16,6 +16,8 @@ class TipoFaltaSeeder extends Seeder
 
             'tpf_numero' => 'Capitulo IV',
             'tpf_descripcion' => 'Faltas Academicas y Disciplinarias',
+            'tpf_tipofalta' => 'Academico',
+            'tpf_calificacion' => 'Leve',
 
         ]);
 

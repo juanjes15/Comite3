@@ -2,27 +2,27 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class articuloReglamento extends Model
 {
     protected $fillable = [
         'arti_numero',
         'arti_descripcion',
-        'arti_numero',
-        'arti_falta',
+        'arti_prohibiciones',
+        'arti_deberes',
         'tpf_id',
     ];
 
      /**
      * Get all of the aprendizs for the Ficha
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function tipofalta(): HasMany
+    public function tipofalta(): BelongsTo
     {
-        return $this->hasMany(tipoFalta::class, 'tpf_id');
+        return $this->belongsTo(tipoFalta::class, 'tpf_id');
     }
 }

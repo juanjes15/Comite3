@@ -3,25 +3,27 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+
 class tipoFalta extends Model
 {
     protected $fillable = [
-        'tpf_observaciones',
         'tpf_numero',
         'tpf_descripcion',
-        'tpf_tipo',
+        'tpf_tipofalta',
+        'tpf_calificacion',
+
     ];
 
 
     /**
      * Get the tipoFalta that owns the tipoFalta
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function articuloReglamento(): BelongsTo
+    public function articuloReglamento(): HasOne
     {
-        return $this->belongsTo(articuloReglamento::class, 'arti_id');
+        return $this->hasOne(articuloReglamento::class, 'arti_id');
     }
 
 

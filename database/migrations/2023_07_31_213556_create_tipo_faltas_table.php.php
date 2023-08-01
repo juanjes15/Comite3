@@ -16,6 +16,8 @@ return new class extends Migration
             $table->id();
             $table->string('tpf_numero');
             $table->string('tpf_descripcion',1000);
+            $table->string('tpf_tipofalta');
+            $table->string('tpf_calificacion');
             $table->timestamps();
         });
 

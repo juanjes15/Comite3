@@ -14,10 +14,11 @@ class ArticuloReglamento extends Seeder
 
         DB::table('articuloreglamentos')->insert([
             'arti_numero' => 'Artículo 25.',
-            'arti_tipo' => 'Faltas',
             'arti_descripcion' => 'Se consideran faltas las acciones u omisiones que alteran el normal desarrollo de la
             formación, la convivencia en la comunidad educativa, el desempeño académico de sus compañeros, y
             que al presentarse originan la necesidad de una medida formativa y/o sancionatoria.',
+            'arti_prohibiciones',
+            'arti_deberes',
             'tpf_id'=> '1',
         ]);
 
