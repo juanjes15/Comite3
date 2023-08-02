@@ -16,10 +16,9 @@ return new class extends Migration
             $table->id();
             $table->string('arti_numero');
             $table->string('arti_descripcion',5000);
-            $table->string('arti_prohibicion');
+            $table->string('arti_prohibicion',5000);
             $table->unsignedBigInteger('tpf_id');
             $table->foreign('tpf_id')->references('id')->on('tipofaltas')->onDelete('cascade');
-
             $table->timestamps();
         });
 
