@@ -12,7 +12,6 @@ class articuloReglamento extends Model
         'arti_numero',
         'arti_descripcion',
         'arti_prohibiciones',
-        'arti_deberes',
         'tpf_id',
     ];
 
