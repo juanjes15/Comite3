@@ -14,7 +14,7 @@ return new class extends Migration
 
         Schema::create('tipofaltas', function (Blueprint $table) {
             $table->id();
-            $table->string('tpf_numero');
+            $table->string('tpf_capitulo');
             $table->string('tpf_descripcion',1000);
             $table->string('tpf_tipofalta',1000);
             $table->string('tpf_calificacion',1000);

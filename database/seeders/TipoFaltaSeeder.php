@@ -14,7 +14,7 @@ class TipoFaltaSeeder extends Seeder
     {
         DB::table('tipofaltas')->insert([
 
-            'tpf_numero' => 'Capitulo IV',
+            'tpf_capitulo' => 'Capitulo IV',
             'tpf_descripcion' => 'Faltas Academicas y Disciplinarias',
             'tpf_tipofalta' => 'Faltas',
             'tpf_calificacion' => 'Leve',
@@ -22,7 +22,7 @@ class TipoFaltaSeeder extends Seeder
 
         DB::table('tipofaltas')->insert([
 
-            'tpf_numero' => 'Capitulo IV',
+            'tpf_capitulo' => 'Capitulo IV',
             'tpf_descripcion' => 'Faltas Academicas y Disciplinarias',
             'tpf_tipofalta' => 'Faltas',
             'tpf_calificacion' => 'Grave',
@@ -30,7 +30,7 @@ class TipoFaltaSeeder extends Seeder
 
         DB::table('tipofaltas')->insert([
 
-            'tpf_numero' => 'Capitulo IV',
+            'tpf_capitulo' => 'Capitulo IV',
             'tpf_descripcion' => 'Faltas Academicas y Disciplinarias',
             'tpf_tipofalta' => 'Faltas',
             'tpf_calificacion' => 'Gravisima',
@@ -38,7 +38,7 @@ class TipoFaltaSeeder extends Seeder
 
         DB::table('tipofaltas')->insert([
 
-            'tpf_numero' => 'Capitulo IV',
+            'tpf_capitulo' => 'Capitulo IV',
             'tpf_descripcion' => 'Faltas Academicas y Disciplinarias',
             'tpf_tipofalta' => 'Faltas Academicas',
             'tpf_calificacion' => 'leve',
@@ -46,7 +46,7 @@ class TipoFaltaSeeder extends Seeder
 
         DB::table('tipofaltas')->insert([
 
-            'tpf_numero' => 'Capitulo IV',
+            'tpf_capitulo' => 'Capitulo IV',
             'tpf_descripcion' => 'Faltas Academicas y Disciplinarias',
             'tpf_tipofalta' => 'Faltas Academicas',
             'tpf_calificacion' => 'Grave',
@@ -54,7 +54,7 @@ class TipoFaltaSeeder extends Seeder
 
         DB::table('tipofaltas')->insert([
 
-            'tpf_numero' => 'Capitulo IV',
+            'tpf_capitulo' => 'Capitulo IV',
             'tpf_descripcion' => 'Faltas Academicas y Disciplinarias',
             'tpf_tipofalta' => 'Faltas Academicas',
             'tpf_calificacion' => 'Gravisima',
@@ -62,7 +62,7 @@ class TipoFaltaSeeder extends Seeder
 
         DB::table('tipofaltas')->insert([
 
-            'tpf_numero' => 'Capitulo IV',
+            'tpf_capitulo' => 'Capitulo IV',
             'tpf_descripcion' => 'Faltas Academicas y Disciplinarias',
             'tpf_tipofalta' => 'Faltas Disciplinarias',
             'tpf_calificacion' => 'leve',
@@ -70,7 +70,7 @@ class TipoFaltaSeeder extends Seeder
 
         DB::table('tipofaltas')->insert([
 
-            'tpf_numero' => 'Capitulo IV',
+            'tpf_capitulo' => 'Capitulo IV',
             'tpf_descripcion' => 'Faltas Academicas y Disciplinarias',
             'tpf_tipofalta' => 'Faltas Disciplinarias',
             'tpf_calificacion' => 'Grave',
@@ -78,7 +78,7 @@ class TipoFaltaSeeder extends Seeder
 
         DB::table('tipofaltas')->insert([
 
-            'tpf_numero' => 'Capitulo IV',
+            'tpf_capitulo' => 'Capitulo IV',
             'tpf_descripcion' => 'Faltas Academicas y Disciplinarias',
             'tpf_tipofalta' => 'Faltas Disciplinarias',
             'tpf_calificacion' => 'Gravisima',

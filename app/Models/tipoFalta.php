@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 class tipoFalta extends Model
 {
     protected $fillable = [
-        'tpf_numero',
+        'tpf_capitulo',
         'tpf_descripcion',
         'tpf_tipofalta',
         'tpf_calificacion',
