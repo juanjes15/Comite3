@@ -11,17 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-
-        Schema::create('tipofaltas', function (Blueprint $table) {
+        Schema::create('normainfringida', function (Blueprint $table) {
             $table->id();
-            $table->string('tpf_capitulo');
-            $table->string('tpf_descripcion',1000);
-            $table->string('tpf_tipofalta',1000);
-            $table->string('tpf_calificacion',1000);
+            $table->unsignedBigInteger('sol_id');
+            $table->unsignedBigInteger('num_id');
+            $table->foreign('sol_id')->references('id')->on('solicitudcomite')->onDelete('cascade');
+            $table->foreign('num_id')->references('id')->on('numeral')->onDelete('cascade');
             $table->timestamps();
         });
-
-
     }
 
     /**
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tipofaltas');
+        Schema::dropIfExists('normainfringida');
     }
 };
