@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->string('apr_direccion');
             $table->date('apr_fechaNacimiento');
             $table->unsignedBigInteger('fic_id');
-            $table->foreign('fic_id')->references('id')->on('fichas');
+            $table->foreign('fic_id')->references('id')->on('fichas')->onDelete('cascade');
             $table->timestamps();
         });
     }

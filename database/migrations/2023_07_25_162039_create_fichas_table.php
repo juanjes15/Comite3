@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->string('fic_modalidad');
             $table->string('fic_jornada');
             $table->unsignedBigInteger('pro_id');
-            $table->foreign('pro_id')->references('id')->on('programas');
+            $table->foreign('pro_id')->references('id')->on('programas')->onDelete('cascade');
             $table->timestamps();
         });
     }
