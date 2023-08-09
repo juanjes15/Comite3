@@ -27,4 +27,10 @@ class Aprendiz extends Model
     {
         return $this->belongsTo(Ficha::class, 'fic_id');
     }
+
+
+    public function user():BelongsTo
+    {
+        return $this->belongsTo(User::class, 'users_id');
+    }
 }

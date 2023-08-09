@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Instructor extends Model
@@ -22,6 +23,12 @@ class Instructor extends Model
      */
     public function comites(): HasMany
     {
-        return $this->hasMany(Comite::class, 'ins_id');
+        return $this->hasMany(Comite::class, 'com_id');
+    }
+
+
+    public function user():BelongsTo
+    {
+        return $this->belongsTo(User::class, 'users_id');
     }
 }

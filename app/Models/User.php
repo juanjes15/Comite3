@@ -10,6 +10,9 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class User extends Authenticatable
 {
@@ -60,4 +63,22 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+    public function comite():BelongsToMany
+    {
+        return $this->belongsToMany(Comite::class, 'com_id');
+    }
+
+
+    public function instructor():HasOne
+    {
+        return $this->hasOne(Instructor::class, 'ins_id');
+    }
+
+
+    public function aprendiz():HasOne
+    {
+        return $this->hasOne(Aprendiz::class, 'apr_id');
+    }
 }

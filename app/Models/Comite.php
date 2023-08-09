@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Comite extends Model
 {
@@ -27,4 +28,18 @@ class Comite extends Model
     {
         return $this->belongsTo(Instructor::class, 'ins_id');
     }
+
+
+
+
+    /**
+     * Get the instructor that owns the Comite
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function user(): HasMany
+    {
+        return $this->hasMany(User::class, 'user_id');
+    }
+
 }
