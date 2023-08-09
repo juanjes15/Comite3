@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 
-class CapituloSeeder extends Seeder
+class _CapituloSeeder extends Seeder
 {
     /**
      * Run the database seeds.

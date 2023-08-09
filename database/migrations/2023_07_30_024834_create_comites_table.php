@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->string('com_estado');
             $table->string('com_recomendacion');
             $table->unsignedBigInteger('ins_id');
-            $table->foreign('ins_id')->references('id')->on('instructors')->onDelete('cascade');
+            $table->foreign('ins_id')->references('id')->on('instructors');
             $table->timestamps();
         });
     }

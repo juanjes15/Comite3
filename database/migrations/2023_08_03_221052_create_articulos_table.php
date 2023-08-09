@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('art_descripcion',7000);
             $table->unsignedBigInteger('cap_id');
-            $table->foreign('cap_id')->references('id')->on('capitulos')->onDelete('cascade');
+            $table->foreign('cap_id')->references('id')->on('capitulos');
         });
     }
 

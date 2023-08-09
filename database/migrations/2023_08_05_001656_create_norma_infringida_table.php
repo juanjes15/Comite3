@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('sol_id');
             $table->unsignedBigInteger('num_id');
-            $table->foreign('sol_id')->references('id')->on('solicitudcomite')->onDelete('cascade');
-            $table->foreign('num_id')->references('id')->on('numeral')->onDelete('cascade');
+            $table->foreign('sol_id')->references('id')->on('solicitudcomite');
+            $table->foreign('num_id')->references('id')->on('numeral');
             $table->timestamps();
         });
     }

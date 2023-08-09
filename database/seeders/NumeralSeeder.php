@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 
-class ArticuloSeeder extends Seeder
+class NumeralSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,6 +17,7 @@ class ArticuloSeeder extends Seeder
             'num_descripcion' => 'Utilizar de manera irresponsable el internet y las nuevas tecnologías dispuestas por el SENA para su proceso formativo.',
             'num_tipofalta' => 'Academica',
             'num_calificacion' => 'Leve',
+            'art_id'=>2,
         ]);
 
         DB::table('numeral')->insert([
@@ -26,11 +27,13 @@ class ArticuloSeeder extends Seeder
             el consumo de estos.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Leve',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Realizar comportamientos contrarios a la normativa SENA en lugares donde se adelanten eventos de formación nacional o internacional, que atenten contra la imagen del SENA o del país.',
             'num_tipofalta' => 'Disciplinario',
             'num_calificacion' => 'Gravisimo',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Ingresar o salir de cualquier instalación del Centro de Formación o de la entidad donde se desarrolle
@@ -38,6 +41,7 @@ class ArticuloSeeder extends Seeder
             ventanas y cerraduras.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Leve',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Destruir, sustraer, dañar total o parcialmente instalaciones físicas, equipos, materiales, software,
@@ -46,6 +50,7 @@ class ArticuloSeeder extends Seeder
             recreativas, deportivas y sociales o intercambios estudiantiles nacionales o internacionales.',
             'num_tipofalta' => 'Academica',
             'num_calificacion' => 'Leve',
+            'art_id'=>2,
         ]);
 
         
@@ -58,27 +63,32 @@ class ArticuloSeeder extends Seeder
             soportes.',
             'num_tipofalta' => 'Academica',
             'num_calificacion' => 'Grave',
+            'art_id'=>2,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Realizar fraude en evaluaciones, en el proceso de aprendizaje o en concursos, juegos o
             competencias de cualquier carácter.',
             'num_tipofalta' => 'Academico',
             'num_calificacion' => 'Grave',
+            'art_id'=>2,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Aportar documentación o información que difiera con la real, para el ingreso a la entidad o para obtener cualquier beneficio de la misma.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Grave',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Suplantar identidad durante el proceso de formación.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Grave',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Alterar, adulterar, falsificar o sustraer documentos oficiales, calificaciones, evaluaciones o firmas correspondientes al SENA o emitidos por ella.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Grave',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Ingresar o portar armas, objetos cortopunzantes, explosivos u otros artefactos que representen
@@ -89,6 +99,7 @@ class ArticuloSeeder extends Seeder
             proceso de aprendizaje, no podrán portar armas en el Centro de Formación.',
             'num_tipofalta' => 'Disciplinario',
             'num_calificacion' => 'Grave',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Destruir, sustraer, dañar total o parcialmente instalaciones físicas, equipos, materiales, software,
@@ -97,6 +108,7 @@ class ArticuloSeeder extends Seeder
             recreativas, deportivas y sociales o intercambios estudiantiles nacionales o internacionales.',
             'num_tipofalta' => 'Academica',
             'num_calificacion' => 'Grave',
+            'art_id'=>2,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Realizar acciones proselitistas de carácter político o religioso dentro de las instalaciones del SENA
@@ -105,6 +117,7 @@ class ArticuloSeeder extends Seeder
             miembro de la comunidad educativa.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Grave',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Generar, transmitir, publicar o enviar información confidencial, de circulación restringida,
@@ -112,24 +125,28 @@ class ArticuloSeeder extends Seeder
             comunicación físicos o electrónicos, disponibles para su proceso formativo.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Gravisimo',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Permanecer con el uniforme acordado para el programa de formación de la especialidad, en
             situaciones o lugares ajenos al proceso de aprendizaje, que deterioren la imagen institucional.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Grave',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Hurtar, estafar o abusar de la confianza de cualquier integrante de la comunidad educativa, o amenazarlo, sobornarlo, coaccionarlo o agredirlo verbal o físicamente, o ser cómplice o copartícipe
             de delitos contra ellos o contra la Institución.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Gravisimo',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Utilizar el nombre del SENA, las instalaciones, el internet y nuevas tecnologías, para actividades particulares o con ánimo de lucro, exceptuando aquellas que sean parte de proyectos productivos
             aprobados por el Subdirector de Centro o la instancia competente.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Gravisimo',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Fumar en áreas no permitidas en el centro de formación, así como ingresar, comercializar,
@@ -138,6 +155,7 @@ class ArticuloSeeder extends Seeder
             el consumo de estos.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Gravisimo',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Elaborar escritos o mensajes satíricos, dibujar y/o escribir sobre cualquier superficie, objeto o
@@ -145,18 +163,21 @@ class ArticuloSeeder extends Seeder
             pancartas o análogos en sitios no autorizados.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Gravisimo',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Propiciar conductas, propuestas o actos inmorales hacia cualquier miembro de la comunidad
             educativa, que atenten contra la integridad física, moral y/o psicológica.',
             'num_tipofalta' => 'Disciplinaria',
             'num_calificacion' => 'Gravisimo',
+            'art_id'=>1,
         ]);
         DB::table('numeral')->insert([
             'num_descripcion' => 'Incumplir las normas de convivencia establecidas en cada Centro de Formación o Centro de
             convivencia.',
             'num_tipofalta' => 'Disciplinario',
             'num_calificacion' => 'Gravisimo',
+            'art_id'=>1,
         ]);
            
     }
