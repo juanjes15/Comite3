@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('sol_id');
             $table->unsignedBigInteger('num_id');
-            $table->foreign('sol_id')->references('id')->on('solicitudcomite');
+            $table->foreign('sol_id')->references('id')->on('solicitud_comite');
             $table->foreign('num_id')->references('id')->on('numeral');
             $table->timestamps();
         });

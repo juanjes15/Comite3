@@ -12,15 +12,11 @@ return new class extends Migration {
     {
         Schema::create('comites', function (Blueprint $table) {
             $table->id();
-            $table->date('com_fechaSolicitud');
-            $table->string('com_descripcionSolicitud');
-            $table->string('com_tipoFalta');
-            $table->string('com_carpetaAnexos');
-            $table->string('com_acta');
-            $table->string('com_estado');
-            $table->string('com_recomendacion');
-            $table->unsignedBigInteger('ins_id');
-            $table->foreign('ins_id')->references('id')->on('instructors');
+            $table->string('com_acta',7000);
+            $table->string('com_estado',7000);
+            $table->date('com_fecha');
+            $table->unsignedBigInteger('sol_id');
+            $table->foreign('sol_id')->references('id')->on('solicitud_comite');
             $table->timestamps();
         });
     }

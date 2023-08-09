@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             FichaSeeder::class,
             AprendizSeeder::class,
             NumeralSeeder::class,
+            ComiteSeeder::class,
             
         ]);
     }
