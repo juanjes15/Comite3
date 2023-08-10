@@ -29,6 +29,10 @@ class DatabaseSeeder extends Seeder
             AprendizSeeder::class,
             NumeralSeeder::class,
             ComiteSeeder::class,
+            InstructorsSeeder::class,
+            SolicitudComiteSeeder::class,
+            PruebasSeeder::class,
+            SolicitudXAprendizSeeder::class,
             
         ]);
     }
