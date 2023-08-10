@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->string('com_acta',7000);
             $table->string('com_estado',7000);
             $table->date('com_fecha');
+            $table->text('com_recomendacion');
             $table->unsignedBigInteger('sol_id');
             $table->foreign('sol_id')->references('id')->on('solicitud_comite');
             $table->timestamps();

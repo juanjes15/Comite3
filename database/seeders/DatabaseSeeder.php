@@ -28,9 +28,9 @@ class DatabaseSeeder extends Seeder
             FichaSeeder::class,
             AprendizSeeder::class,
             NumeralSeeder::class,
-            ComiteSeeder::class,
             InstructorsSeeder::class,
             SolicitudComiteSeeder::class,
+            ComiteSeeder::class,
             PruebasSeeder::class,
             SolicitudXAprendizSeeder::class,
             

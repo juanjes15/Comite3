@@ -13,13 +13,13 @@ class ComiteSeeder extends Seeder
     public function run(): void
     {
         DB::table('comites')->insert([
-            'com_fechaSolicitud' => fake()->date(),
-            'com_descripcionSolicitud' => fake()->date(),
-            'fic_inicioProductiva' => fake()->date(),
-            'fic_finProductiva' => fake()->date(),
-            'fic_modalidad' => 'Presencial',
-            'fic_jornada' => 'Diurna',
-            'pro_id' => fake()->numberBetween(1, 7),
+            'com_acta' => 'Acta del comite ',
+            'com_estado' => 'En proceso',
+            'com_fecha' => now(),
+            'com_recomendacion' => 'Sacarlo del sena es la mejor opcion',
+            'sol_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }
