@@ -2,37 +2,27 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class SolicitudComite extends Model
 {
+    use HasFactory;
+
+    protected $table = 'solicitud_comite';
+
     protected $fillable = [
         'sol_fecha',
         'sol_lugar',
         'sol_asunto',
-        'sol_asunto',
         'sol_motivo',
         'sol_estado',
+        'ins_id',
     ];
 
-    
-    public function numeral():BelongsToMany
+    public function instructor()
     {
-        return $this->belongsToMany(Numeral::class, 'num_id');
+        return $this->belongsTo(Instructor::class, 'ins_id');
     }
-
-
-    public function comite():BelongsTo
-    {
-        return $this->belongsTo(Comite::class, 'com_id');
-    }
-
-    public function instructors():BelongsToMany
-    {
-        return $this->belongsToMany(Instructor::class, 'ins_id');
-    }
-
-
 }
+

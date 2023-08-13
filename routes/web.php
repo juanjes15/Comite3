@@ -31,5 +31,7 @@ Route::middleware([
     Route::resource('instructors', \App\Http\Controllers\InstructorController::class);
     Route::resource('comites', \App\Http\Controllers\ComiteController::class);
     Route::resource('reglamentos', \App\Http\Controllers\ReglamentoController::class);
+    Route::resource('pruebas', \App\Http\Controllers\PruebaController::class);
+    Route::resource('solicitud_comites', \App\Http\Controllers\SolicitudComiteController::class);
     // Route::resource('tipoFaltas', \App\Http\Controllers\ReglamentoController::class);
 });
