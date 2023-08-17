@@ -4,15 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\SolicitudComite;
+use App\Models\Instructor;
+
+
 
 class SolicitudComiteController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $solicitudes = SolicitudComite::all();
-
-        return view('solicitud_comites.index', compact('solicitudes'));
+        $busqueda = $request->busqueda;
+    
+        $solicitudes = SolicitudComite::where('sol_motivo', 'LIKE', '%' . $busqueda . '%')
+            ->paginate(2);
+    
+        $instructores = Instructor::all(); 
+    
+        return view('solicitud_comites.index', compact('solicitudes', 'instructores'));
     }
+    
 
     public function create()
     {

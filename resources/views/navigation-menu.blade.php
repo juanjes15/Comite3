@@ -30,6 +30,9 @@
                     <x-nav-link href="{{ route('solicitud_comites.index') }}" :active="request()->routeIs('solicitud_comites.*')">
                         {{ __('solicitud_comites') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('comites.index') }}" :active="request()->routeIs('comites.*')">
+                        {{ __('comites') }}
+                    </x-nav-link>
                    
                    
                     

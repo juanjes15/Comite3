@@ -6,15 +6,19 @@ use App\Http\Requests\StoreComiteRequest;
 use App\Http\Requests\UpdateComiteRequest;
 use App\Models\Comite;
 use App\Models\Instructor;
+use Illuminate\Http\Request;
+
 
 class ComiteController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $comites = Comite::all();
+        $busqueda= $request->busqueda;
+        $comites = Comite::where('com_recomendacion','LIKE','%'.$busqueda.'%')
+        ->paginate(2);
         $instructors = Instructor::all();
         return view('comites.index', compact('comites', 'instructors'));
     }

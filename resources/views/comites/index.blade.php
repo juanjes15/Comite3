@@ -3,6 +3,13 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Lista de comites') }}
         </h2>
+        <div class="p-4">
+    <form action="{{ route('comites.index') }}" method="GET">
+        <input type="text" name="busqueda" placeholder="Buscar comité...">
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+
     </x-slot>
 
     <div class="py-12">
