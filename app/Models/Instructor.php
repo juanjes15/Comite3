@@ -42,4 +42,8 @@ class Instructor extends Model
     {
         return $this->hasOne(SolicitudComite::class, 'sol_id');
     }
+    public function fichas(): HasMany
+    {
+        return $this->hasMany(Ficha::class, 'ins_id');
+    }
 }

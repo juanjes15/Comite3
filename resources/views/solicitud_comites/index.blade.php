@@ -8,7 +8,7 @@
                 <input type="text" name="busqueda" placeholder="Buscar solicitud comite...">
                 <button type="submit">Buscar</button>
             </form>
-        </div>
+        </div>   
     </x-slot>
 
     <div class="py-12">
@@ -18,6 +18,15 @@
                     @can('administrar solicitudes')
                         <x-link href="{{ route('solicitud_comites.create') }}" class="m-4">Añadir Solicitud</x-link>
                     @endcan
+                    <div class="p-4">
+                        <form action="{{ route('solicitud_comites.create') }}" method="GET">
+                            <div class="flex mt-4">
+                                <x-button>
+                                    {{ __('Crear solicitud') }}
+                                </x-button>
+                            </div>
+                        </form>
+                    </div>
                     <table class="w-full text-sm text-left text-gray-500">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                             <tr>
@@ -41,6 +50,7 @@
                                 </th>
                                 @can('administrar comites')
                                     <th scope="col" class="px-6 py-3">
+                                        Opciones
                                     </th>
                                 @endcan
                             </tr>
@@ -69,6 +79,17 @@
                                                 {{ $instructor->ins_nombres }}
                                             @endif
                                         @endforeach
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <x-link href="{{ route('solicitud_comites.edit', $solicitud) }}">Editar</x-link>
+                                        <form method="POST" action="{{ route('solicitud_comites.destroy', $solicitud) }}"
+                                            class="inline-block">
+                                            @csrf
+                                            @method('DELETE')
+                                            <x-danger-button type="submit" onclick="return confirm('¿Está seguro?')">
+                                                Eliminar
+                                            </x-danger-button>
+                                        </form>
                                     </td>
                                 </tr>
                             @empty

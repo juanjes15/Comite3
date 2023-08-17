@@ -38,4 +38,9 @@ class Ficha extends Model
     {
         return $this->hasMany(Aprendiz::class, 'fic_id');
     }
+    
+    public function instructors(): BelongsTo
+    {
+        return $this->belongsTo(Instructor::class, 'ins_id');
+    }
 }
