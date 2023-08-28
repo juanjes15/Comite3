@@ -346,13 +346,13 @@ return [
                 ],
                 [
                     'text'    => 'Impugnaciones',
-                    'route'     => '',
+                    'route'     => 'aprendices_View.index',
                     'icon'  => 'fas fa-comment-dots',
                     
                 ],
                 [
                     'text' => 'Reglamento del aprendiz',
-                    'route'  => '',
+                    'route'  => 'aprendices_View.index',
                     'icon'  => 'fas fa-book-open',
                 ],
             ],
